@@ -1,0 +1,33 @@
+Overview
+  This script implements a simple neural network to classify handwritten digits using the TensorFlow library on the MNIST dataset.
+
+Dependencies
+  numpy
+  pandas
+  tensorflow
+  scikit-learn
+  matplotlib
+Data
+  The dataset used is the MNIST dataset. Ensure you have the following CSV files in your working directory or provide the appropriate path:
+
+  mnist_train.csv: Training data
+  mnist_test.csv: Testing data
+How to Run
+  Ensure you have all the dependencies installed.
+  Place the dataset CSV files in the working directory or update the paths in the script.
+Run the script: python Neural networks.py
+Script Breakdown
+  Data Loading: Loads MNIST training and testing datasets from CSV files.
+  Data Preprocessing: Normalizes the pixel values and one-hot encodes the labels.
+  Neural Network Model:
+    Input layer: 784 neurons (28x28 pixel images)
+    Hidden layer: 100 neurons with sigmoid activation
+    Output layer: 10 neurons with softmax activation
+    Model Training: Uses SGD with learning rate of 0.1 and momentum of 0.9. The model is trained for 50 epochs with a batch size of 32.
+    Evaluation: Computes the accuracy of the trained model on the test dataset.
+    Visualization:
+      Generates a confusion matrix to evaluate the performance per class.
+      Plots the training and validation losses over epochs.
+    Output: Saves the training history to history_data100.csv.
+Note
+  Ensure you have sufficient computational resources as training neural networks can be resource-intensive.
